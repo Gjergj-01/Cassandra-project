@@ -1,0 +1,44 @@
+# Query 1
+
+SELECT *
+FROM movies.ratings
+WHERE rating = 'TV-MA' AND type = 'Movie'
+LIMIT 10; 
+
+
+
+# Query 2
+
+SELECT show_id, title
+FROM movies.netflix_titles
+WHERE type = 'TV Show' AND rating = 'TV-14'
+LIMIT 10;
+
+SELECT show_id, title
+FROM movies.netflix_titles
+WHERE type = 'TV Show' AND rating = 'TV-14' 
+LIMIT 10
+ALLOW FILTERING;
+
+OR 
+
+CREATE INDEX rating_index ON movies.netflix_title (rating);
+
+
+
+# Query 3
+
+SELECT COUNT(*) 
+FROM movies.ratings 
+WHERE rating = 'TV-14' AND type = 'TV Show'; 
+
+
+# Query 4 
+SELECT show_id, title, type 
+FROM movies.ratings 
+WHERE rating = 'TV-MA' 
+ORDER BY show_id ASC 
+LIMIT 10;
+
+
+

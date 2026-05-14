@@ -5,7 +5,7 @@ Project for the Large-Scale Data Management course (Big Data part)
 ### Description
 A simple project Developed for the Big Data course to practice with **NoSQL** databases, precisely **Cassandra**.
 
-I took a simple (and classic) database from Kaggle, [Netflix-movies](https://www.kaggle.com/datasets/shivamb/netflix-shows) for which e defined the following *"schema"*:
+I took a simple (and classic) database from Kaggle, [Netflix-movies](https://www.kaggle.com/datasets/shivamb/netflix-shows) for which I defined the following *"schema"*:
 
 ``` sql
 CREATE KEYSPACE IF NOT EXISTS movies
@@ -51,6 +51,8 @@ LIMIT 10 ;
 ```
 
 ### Query 2
+
+Let's pose a similar query to the *netflix_titles* column-family
 
 ``` sql
 SELECT show_id, title
